@@ -1,0 +1,74 @@
+.offer {
+  background-image: linear-gradient(
+      rgba($color-black, 0.5),
+      rgba($color-black, 0.5)
+    ),
+    url("/public/img/typeWritter.webp");
+  background-size: 70%;
+  background-position: right;
+  display: grid;
+  grid-template-columns: 45% 1fr;
+  grid-gap: 2rem;
+  align-items: center;
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url("/public/img/typeWritter_sm.webp");
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    background-size: cover;
+    box-shadow: $box-shadow;
+  }
+
+  &__form {
+    background: $color-gray-light;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-right: 8rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    grid-gap: 1.5rem;
+    clip-path: polygon(0 0, 100% 0, 93% 100%, 0% 100%);
+
+    @include respond(phone) {
+      background: rgba($color-gray-light, 0.5);
+      clip-path: none;
+      padding-right: 2rem;
+      grid-template-columns: 1fr;
+      grid-row: 2;
+    }
+  }
+
+  &__input {
+    background: $color-white;
+    padding: 1rem;
+    color: $color-gray-light;
+    font-size: 1.4rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__caption {
+    padding-left: 0;
+    text-shadow: $text-shadow;
+
+    @include respond(tab-port) {
+      font-size: 1.4rem;
+    }
+    @include respond(phone) {
+      text-align: center;
+      padding-left: 2rem;
+    }
+  }
+
+  &__text {
+    margin-top: 1rem;
+  }
+}

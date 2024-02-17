@@ -1,0 +1,61 @@
+.values {
+  &__container {
+    margin: 2rem 0rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    background: $color-primary;
+
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+    }
+
+    &--1 {
+      background: linear-gradient(
+        to right,
+        $color-primary,
+        $color-primary-dark
+      );
+
+      @include respond(phone) {
+        background: linear-gradient(
+          to bottom,
+          $color-primary,
+          $color-primary-dark
+        );
+      }
+    }
+    &--2 {
+      background: linear-gradient(
+        to bottom,
+        $color-purple,
+        $color-purple-dark,
+        $color-purple
+      );
+    }
+    &--3 {
+      background: linear-gradient(
+        to right,
+        $color-primary-dark,
+        $color-primary
+      );
+      @include respond(phone) {
+        background: linear-gradient(
+          to bottom,
+          $color-primary-dark,
+          $color-primary
+        );
+      }
+    }
+  }
+}

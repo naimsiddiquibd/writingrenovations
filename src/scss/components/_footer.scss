@@ -1,0 +1,41 @@
+.footer {
+  background: $color-gray-light;
+  margin-top: 4rem;
+  display: grid;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: repeat(2, min-content);
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-items: center;
+    grid-gap: 2rem;
+  }
+
+  &__link-img,
+  &__logo-img {
+    height: 4rem;
+  }
+
+  &__logo-img {
+    @include respond(phone) {
+      display: none;
+    }
+
+    &--sm {
+      display: none;
+      @include respond(phone) {
+        height: 10rem;
+        display: flex;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    grid-gap: 2rem;
+  }
+}

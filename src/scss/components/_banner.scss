@@ -1,0 +1,112 @@
+.banner {
+  position: relative;
+  height: 100vh;
+  background: url("/public/img/NYC.webp");
+  background-size: cover;
+  background-position: center 20%;
+  overflow: hidden;
+
+  @include respond(tab-port) {
+    background: url("/public/img/NYC_sm.webp");
+    background-size: cover;
+    background-position: center 20%;
+  }
+
+  &__scene-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("/public/img/Desk.webp");
+    background-size: cover;
+    background-position: center;
+
+    backdrop-filter: blur(0.5rem) saturate(10%) brightness(110%);
+    animation: forwards bigger 4000ms;
+    animation-delay: 1300ms;
+
+    @include respond(tab-port) {
+      background: url("/public/img/Desk_sm.webp");
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    color: $color-black;
+    font-size: 6rem;
+    text-shadow: $text-shadow;
+    animation: forwards bigger 4000ms;
+    animation-delay: 1000ms;
+    text-align: center;
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+  }
+
+  &__scene-2 {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 45%;
+    align-content: center;
+    justify-items: start;
+    background: url("/public/img/lauraBanner.webp");
+    background-size: cover;
+    background-position: center 46%;
+    opacity: 0;
+
+    animation: fadeIn 1000ms forwards;
+    animation-delay: 5000ms;
+
+    @include respond(tab-port) {
+      background: url("/public/img/lauraBanner_sm.webp");
+      background-size: cover;
+      background-position: left 50%;
+    }
+
+    @include respond(phone) {
+      grid-template-columns: 60%;
+      background-size: cover;
+      background-position: left 46%;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-gap: 1rem;
+    justify-items: start;
+    opacity: 0;
+
+    animation: fadeInRight 1000ms forwards;
+    animation-delay: 5500ms;
+  }
+
+  &__head {
+    font-family: "Playfair Display", serif;
+    color: $color-black;
+    font-size: 4rem;
+    font-weight: normal;
+    text-shadow: $text-shadow-bright;
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+  }
+
+  &__text {
+    color: $color-black;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: $text-shadow-bright;
+
+    @include respond(phone) {
+      font-size: 1.6rem;
+    }
+  }
+}

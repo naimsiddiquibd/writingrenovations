@@ -1,0 +1,129 @@
+.port {
+  &__header {
+    background: linear-gradient(
+        rgba($color-primary, 0.7),
+        rgba($color-primary, 0.3)
+      ),
+      url("/public/img/typeWritter.webp");
+    background-size: cover;
+
+    height: 35vw;
+
+    display: flex;
+    flex-flow: column;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include respond(tab-port) {
+      height: 50vw;
+    }
+    @include respond(phone) {
+      height: 80vw;
+    }
+  }
+
+  &__title {
+    color: $color-white;
+    font-size: 4rem;
+    text-shadow: $text-shadow;
+  }
+
+  &__text {
+    text-shadow: $text-shadow;
+    width: 60%;
+    @include respond(phone) {
+      width: 85%;
+    }
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__item {
+    background-color: $color-gray-light;
+    display: flex;
+    align-items: center;
+    box-shadow: $box-shadow;
+    transition: $transition-general;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(0.97);
+      box-shadow: $box-shadow-close;
+    }
+  }
+
+  &__img {
+    object-fit: contain;
+    width: 100%;
+    max-height: 20rem;
+  }
+
+  &__modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 8000;
+    width: 70%;
+    box-shadow: $box-shadow-big;
+    border: 0.3rem solid $color-primary;
+    transition: $transition-general;
+    background-color: $color-gray-dark;
+    display: flex;
+
+    &--hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @include respond(phone) {
+      width: 95%;
+    }
+  }
+
+  &__full-img {
+    width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+  }
+
+  &__modal-close {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    right: -2rem;
+    top: -2rem;
+    transform: rotate(45deg);
+    border: 0.3rem solid $color-white;
+    background: $color-gray-light;
+    border-radius: 50%;
+    filter: drop-shadow($box-shadow-close);
+  }
+
+  &__modal-line {
+    display: block;
+    height: 0.3rem;
+    width: 80%;
+    background: $color-white;
+    border-radius: 0.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &--2 {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+}

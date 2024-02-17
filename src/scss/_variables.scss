@@ -1,0 +1,22 @@
+$color-gray-dark: #282b30;
+$color-gray-light: #424549;
+$color-gray-extra-light: #d3d3d3;
+$color-black: #000;
+$color-white: #fff;
+
+$color-primary: #2596ee;
+$color-primary-dark: #0b3758;
+
+$color-purple: #7525ee;
+$color-purple-dark: #471cb2;
+
+$box-shadow: 0.5rem 0.5rem 0.5rem rgba($color-black, 0.2);
+$box-shadow-big: 2rem 2rem 1rem rgba($color-black, 0.3);
+$box-shadow-close: 0.2rem 0.2rem 0.2rem rgba($color-black, 0.4);
+
+$text-shadow: 0.2rem 0.2rem 0.3rem rgba($color-black, 0.3);
+$text-shadow-dark: 0.2rem 0.2rem 0.4rem rgba($color-black, 0.5);
+$text-shadow-bright: 0.2rem 0.2rem 0.5rem rgba($color-white, 0.7);
+
+$transition-general: all 300ms ease-out;
+$transition-slow: all 500ms ease-in-out;

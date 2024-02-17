@@ -1,0 +1,49 @@
+.struggle {
+  font-family: "Special Elite", serif;
+
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+
+  height: 45vw;
+
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-image: linear-gradient(
+      rgba($color-black, 0.8),
+      rgba($color-black, 0) 40%
+    ),
+    url("/public/img/Struggle.jpg");
+
+  background-size: cover;
+  background-position: center bottom;
+
+  @include respond(tab-land) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    background-image: linear-gradient(
+        rgba($color-black, 0.8),
+        rgba($color-black, 0) 40%,
+        rgba($color-black, 0) 50%
+      ),
+      url("/public/img/Struggle.jpg");
+  }
+  @include respond(phone) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height: 70vw;
+  }
+
+  &__title {
+    font-size: 4rem;
+    text-align: center;
+
+    @include respond(tab-land) {
+      font-size: 3rem;
+    }
+    @include respond(tab-port) {
+      font-size: 2rem;
+    }
+  }
+}

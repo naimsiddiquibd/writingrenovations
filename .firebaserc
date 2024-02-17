@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "writing-renovations-v2",
+    "public": "build"
+  }
+}
